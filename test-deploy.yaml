@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: petclinic-test
-        image: eu.gcr.io/emea-sa-demo/petclinic-kaniko:latest
+        image: 192.168.43.147:5000/tekton/petclinic-kaniko:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080
