@@ -27,10 +27,12 @@ apiVersion: v1
 metadata:
   name: petclinic-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: petclinic
   ports:
-  - protocol: TCP
-    port: 9090
-    targetPort: 8080
+  - name: linilee-deploy
+    nodePort: 12321
+    port: 8080
+    protocol: TCP
+    targetPort: 8087
